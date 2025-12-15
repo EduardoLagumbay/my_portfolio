@@ -1,6 +1,6 @@
-
 import Link from "next/link";
-import { journalEntries } from "@/data/journal";
+import { journalEntries, handwrittenEntries } from "@/data/journal";
+import JournalGallery from "@/components/JournalGallery";
 import type { Metadata } from "next";
 import Image from "next/image";
 
@@ -24,12 +24,12 @@ export default function JournalPage() {
           </p>
         </div>
 
-        {/* Timeline */}
-        <div className="relative">
+        {/* Timeline Section */}
+        <div className="relative mb-32">
           {/* Timeline line */}
           <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-border" />
 
-          <div className="space-y-12" >
+          <div className="space-y-12">
             {journalEntries.map((entry, index) => (
               <div
                 key={entry.id}
@@ -37,11 +37,16 @@ export default function JournalPage() {
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
               >
-
                 {/* Timeline dot (desktop) */}
-                <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-primary items-center justify-center text-2xl z-10 overflow-hidden">
+                <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-primary items-center justify-center text-2xl z-10 overflow-hidden border-4 border-card-bg">
                   {entry.image && entry.image.trim().startsWith("/") ? (
-                    <Image src={entry.image.replace(/^\/public/, "")} alt="Company Logo" width={48} height={48} className="object-contain w-10 h-10" />
+                    <Image
+                      src={entry.image.replace(/^\/public/, "")}
+                      alt="Company Logo"
+                      width={48}
+                      height={48}
+                      className="object-contain w-10 h-10"
+                    />
                   ) : (
                     entry.image
                   )}
@@ -54,12 +59,18 @@ export default function JournalPage() {
                   }`}
                 >
                   <Link href={`/journal/${entry.id}`}>
-                    <article className="bg-card-bg rounded-2xl border border-border p-6 card-hover cursor-pointer">
-
+                    <article className="bg-card-bg rounded-2xl border border-border p-6 card-hover cursor-pointer relative group">
+                      
                       {/* Mobile logo/emoji */}
                       <div className="md:hidden w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-2xl mb-4 overflow-hidden">
                         {entry.image && entry.image.trim().startsWith("/") ? (
-                          <Image src={entry.image.replace(/^\/public/, "")} alt="Company Logo" width={48} height={48} className="object-contain w-10 h-10" />
+                          <Image
+                            src={entry.image.replace(/^\/public/, "")}
+                            alt="Company Logo"
+                            width={48}
+                            height={48}
+                            className="object-contain w-10 h-10"
+                          />
                         ) : (
                           entry.image
                         )}
@@ -154,6 +165,23 @@ export default function JournalPage() {
             ))}
           </div>
         </div>
+
+        {/* Single Card Handwritten Notes Gallery */}
+        <div className="border-t border-border pt-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">
+              Handwritten <span className="gradient-text">Notes</span>
+            </h2>
+            <p className="text-secondary max-w-2xl mx-auto">
+              Snapshots of my actual written journal entries and sketches during the tour.
+            </p>
+          </div>
+
+          {/* Use the new Client Component */}
+          <JournalGallery entries={handwrittenEntries} />
+
+        </div>
+
       </div>
     </div>
   );

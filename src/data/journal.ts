@@ -34,9 +34,17 @@ export const journalEntries: JournalEntry[] = [
     IT infrastructure and workforce competencies.
 
 
-    OBSERVATION:
+    OBSERVATION: The company strongly focuses on cybersecurity, and it’s clear 
+    that they are highly skilled through their certifications, services, 
+    and training programs. I was honestly surprised by how risky today’s technology, 
+    data, and IT industry can be. This company plays an important role in the modern tech 
+    world by offering job opportunities, real-world experience, professional growth, 
+    achievements, and insights into hacking.
 
-    LEARNINGS:
+    LEARNINGS: I learned that cybersecurity is essential in today’s digital 
+    world and that technology and data come with serious risks. The experience 
+    made me more aware of cyber threats and the many career opportunities in 
+    cybersecurity and the IT industry.
 
     `,
     tags: ["Day 1", "Ethical Hacking", "Cybersecurity"],
@@ -65,9 +73,15 @@ export const journalEntries: JournalEntry[] = [
     less ideal if your goal is full electronics design engineering. If you like, 
     I can check whether they have any dedicated electronics hardware/embedded systems course track.
 
-    OBSERVATION:
+    OBSERVATION: Sir Xavier showed strong skills and shared helpful insights 
+    on how technology is making programming education easier and more 
+    accessible in the Philippines. He also reminded us of the importance 
+    of maximizing the use of AI to improve our learning and skills.
 
-    LEARNINGS:
+    LEARNINGS: I learned that technology plays an important 
+    role in making programming education more accessible in the Philippines. 
+    I also realized that using AI effectively can help students learn better, 
+    improve skills, and stay competitive in the tech industry.
     `,
     tags: ["Day 2", "Education", "Interactive", "Hands-on" ],
   },
@@ -94,9 +108,12 @@ export const journalEntries: JournalEntry[] = [
     less ideal if your goal is full electronics design engineering. If you like, 
     I can check whether they have any dedicated electronics hardware/embedded systems course track.
 
-    OBSERVATION:
+    OBSERVATION: RIVAN IT Cebu gave me a clear understanding of the company’s strong 
+    focus on IT and networking certifications. Their curriculum is clearly 
+    aligned with industry-standard skills, particularly in Cisco, Linux, and security.
 
-    LEARNINGS:
+    LEARNINGS: I learned that IT and networking certifications, 
+    especially in Cisco, Linux, and security, are essential for building industry-ready skills.
     `,
     tags: ["Day 2", "Cybersecurity"],
   },
@@ -114,9 +131,14 @@ export const journalEntries: JournalEntry[] = [
     meaning “eyes,” Mata Tech provides immersive 360° previews that allow users to 
     explore properties and notable locations as if they were truly there.
 
-    OBSERVATION:
+    OBSERVATION: My observation is that MATA Technologies, Inc. 
+    focuses strongly on UI/UX design. Their creativity is impressive, 
+    and it is clear how talented their team is. I also noticed that 
+    they communicated with us in a very friendly and approachable manner.
 
-    LEARNINGS:
+    LEARNINGS: I learned the importance of creativity and talent in UI/UX design. 
+    I also realized that being approachable and friendly while sharing 
+    knowledge makes learning and collaboration much more effective.
     `,
     tags: ["Day 3", "Environment", "Interactive", "Innovation"],
   },
@@ -138,10 +160,73 @@ export const journalEntries: JournalEntry[] = [
     Operating 24/7 through the emergency hotline 117. TARSLER. 
     117 is composed of trashed responders equipped for rescue, first aid, and disaster operations.
     
-    \n\nOBSERVATION:
+    \n\nOBSERVATION: During the visit to T.A.R.S.I.E.R 117, 
+    I was impressed by how advanced and upgraded their operations are. 
+    They are highly committed to keeping their kababayan safe, demonstrating 
+    professionalism and a strong willingness to learn. I also found them to be 
+    very friendly and approachable.
 
-    \nLEARNINGS:
+    \nLEARNINGS: I learned the importance of 
+    professionalism, continuous learning, and 
+    dedication in ensuring the safety of others, 
+    while maintaining a friendly and approachable attitude.
     `,
     tags: ["Day 4", "Rescue", "Respond"],
   },
+];
+
+
+export interface HandwrittenEntry {
+  id: string;
+  image: string;
+  alt: string;
+}
+
+export const handwrittenEntries: HandwrittenEntry[] = [
+  {
+    id: "hw-1",
+    image: "/gallery/journal/1.jpg", 
+    alt: "Page 1",
+  },
+  {
+    id: "hw-2",
+    image: "/gallery/journal/2.jpg",
+    alt: "Page 2",
+  },
+  {
+    id: "hw-3",
+    image: "/gallery/journal/3.jpg",
+    alt: "Page 3",
+  },
+  {
+    id: "hw-4",
+    image: "/gallery/journal/4.jpg",
+    alt: "Page 4",
+  },
+  {
+    id: "hw-5",
+    image: "/gallery/journal/5.jpg",
+    alt: "Page 5",
+  },
+  {
+    id: "hw-6",
+    image: "/gallery/journal/6.jpg",
+    alt: "Page 6",
+  },
+  {
+    id: "hw-7",
+    image: "/gallery/journal/7.jpg",
+    alt: "Page 7",
+  },
+  {
+    id: "hw-8",
+    image: "/gallery/journal/8.jpg",
+    alt: "Page 8",
+  },
+  {
+    id: "hw-9",
+    image: "/gallery/journal/9.jpg",
+    alt: "Page 9",
+  },
+
 ];
